@@ -67,8 +67,8 @@ void TestState::init() {
 }
 
 void TestState::input() {
-	if (glfwGetKey(ClientDevice::getContext(), GLFW_KEY_ESCAPE) == GLFW_PRESS)
-		glfwSetWindowShouldClose(ClientDevice::getContext(), true);
+	if (glfwGetKey(ContextDevice::getContext(), GLFW_KEY_ESCAPE) == GLFW_PRESS)
+		glfwSetWindowShouldClose(ContextDevice::getContext(), true);
 }
 
 void TestState::update() {

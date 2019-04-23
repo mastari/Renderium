@@ -4,7 +4,7 @@ EngineLoop::EngineLoop(EngineState* state) {
 	if (!EngineLoop::netLoops) {
 		this->states.push(state);
 		EngineLoop::netLoops++;
-		ClientDevice::initLoop(this);
+		ContextDevice::initLoop(this);
 		this->pendingState = NULL;
 	}
 	else {
@@ -20,16 +20,16 @@ void EngineLoop::pushState(EngineState* nstate) {
 
 void EngineLoop::run() {
 	states.top()->init();
-	while (!glfwWindowShouldClose(ClientDevice::getContext())) {
+	while (!glfwWindowShouldClose(ContextDevice::getContext())) {
 		states.top()->input();
 		states.top()->update();
-		states.top()->render(ClientDevice::getContext());
+		states.top()->render(ContextDevice::getContext());
 		if (pendingState != NULL) {
 			states.push(this->pendingState);
 			this->pendingState = NULL;
 			states.top()->init();
 		}
-		glfwSwapBuffers(ClientDevice::getContext());
+		glfwSwapBuffers(ContextDevice::getContext());
 		glfwPollEvents();
 	}
 }

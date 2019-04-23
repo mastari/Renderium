@@ -2,7 +2,7 @@
 
 #include "../Engine.h"
 #include <iostream>
-#include "../../ClientDevice/ClientDevice.h"
+#include "../../ContextDevice/ContextDevice.h"
 
 class RenderiumWindow {
 public:

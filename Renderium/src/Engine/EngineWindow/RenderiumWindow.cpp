@@ -31,7 +31,7 @@ RenderiumWindow::RenderiumWindow(std::string name, GLint width, GLint height, bo
 			glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 		//Apply class values to physical context
 		this->contextWindow = glfwCreateWindow(windowWidth, windowHeight, windowTitle.c_str(), nullptr, nullptr);
-		ClientDevice::initWindow(contextWindow);
+		ContextDevice::initWindow(contextWindow);
 
 		if (nullptr == this->contextWindow) {
 			std::cout << "Failed to create window.\n";
@@ -50,7 +50,7 @@ RenderiumWindow::RenderiumWindow(std::string name, GLint width, GLint height, bo
 			exit(EXIT_FAILURE);
 		}
 
-		glViewport(0, 0, ClientDevice::getScreenWidth(), ClientDevice::getScreenHeight());
+		glViewport(0, 0, ContextDevice::getScreenWidth(), ContextDevice::getScreenHeight());
 	}
 	else {
 		std::cout << "Sorry, you may only create one window per program." << std::endl;

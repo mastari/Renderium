@@ -2,7 +2,7 @@
 #include "../Engine/Engine.h"
 
 
-class ClientDevice {
+class ContextDevice {
 public:
 	static void initWindow(GLFWwindow* window);
 	static void initLoop(class EngineLoop* loop);
@@ -16,5 +16,5 @@ private:
 	static int screenHeight;
 	static struct GLFWwindow* currentContext;
 	static class EngineLoop* currentLoop;
-	ClientDevice();
+	ContextDevice();
 };

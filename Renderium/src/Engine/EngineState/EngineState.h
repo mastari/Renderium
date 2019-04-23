@@ -1,5 +1,5 @@
 #pragma once
-#include "../../ClientDevice/ClientDevice.h"
+#include "../../ContextDevice/ContextDevice.h"
 
 class EngineState {
 public:
