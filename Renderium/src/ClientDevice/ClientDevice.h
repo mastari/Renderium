@@ -1,6 +1,5 @@
 #pragma once
-#include "GLFW/glfw3.h"
-#include "../EngineLoop/EngineLoop.h"
+#include "../Engine/Engine.h"
 
 
 class ClientDevice {

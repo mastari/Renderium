@@ -3,7 +3,7 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "../../../EngineState/EngineState.h"
+#include "../../../Engine/Engine.h"
 #include "../../../Utilities/FileReader/FileReader.h"
 
 class TestState : virtual EngineState {

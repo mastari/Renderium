@@ -3,8 +3,8 @@
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "../RenderiumWindow/RenderiumWindow.h";
-#include "../EngineLoop/EngineLoop.h"
+#include "../Engine/EngineWindow/RenderiumWindow.h";
+#include "../Engine/EngineLoop/EngineLoop.h"
 #include "States/testState/testState.h"
 
 int main() {

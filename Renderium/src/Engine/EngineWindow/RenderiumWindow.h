@@ -1,9 +1,8 @@
 #pragma once
 
-#include <GL/glew.h>
-#include <GLFW/glfw3.h>
+#include "../Engine.h"
 #include <iostream>
-#include "../ClientDevice/ClientDevice.h"
+#include "../../ClientDevice/ClientDevice.h"
 
 class RenderiumWindow {
 public:

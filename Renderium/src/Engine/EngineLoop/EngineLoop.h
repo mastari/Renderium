@@ -1,7 +1,6 @@
 #pragma once
-#include <GLFW/glfw3.h>
-#include "../ClientDevice/ClientDevice.h"
-#include "../EngineState/EngineState.h"
+#include "../Engine.h"
+#include "../../ClientDevice/ClientDevice.h"
 #include <iostream>
 #include <stack>
 
