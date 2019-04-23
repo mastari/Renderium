@@ -4,24 +4,16 @@
 #include <GLFW/glfw3.h>
 
 #include "../RenderiumWindow/RenderiumWindow.h";
+#include "../EngineLoop/EngineLoop.h"
+#include "States/states.h"
 
 int main() {
 
-	RenderiumWindow window("Sim1.0", 800, 600, true);
+	RenderiumWindow rWindow("Sim1.0", 800, 600, true);
 
-	while (!glfwWindowShouldClose(window.getContext())) {
-		glfwPollEvents();
-		//Inputs
+	FirstState* state = new FirstState();
 
-		glClearColor(0.2f, 0.3f, 0.4f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+	EngineLoop looper((EngineState*)state);
+	looper.run();
 
-		//Logic
-
-		//Draw
-
-		glfwSwapBuffers(window.getContext());
-	}
-
-	return EXIT_SUCCESS;
 }
