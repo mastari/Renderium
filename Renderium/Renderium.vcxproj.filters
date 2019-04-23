@@ -27,7 +27,10 @@
     <ClCompile Include="src\Test\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Test\States\testState.cpp">
+    <ClCompile Include="src\Utilities\FileReader\FileReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Test\States\testState\testState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -44,11 +47,15 @@
     <ClInclude Include="src\EngineState\EngineState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Test\States\states.h">
+    <ClInclude Include="src\Utilities\FileReader\FileReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Test\States\testState.h">
+    <ClInclude Include="src\Test\States\testState\testState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Test\States\testState\fragment.fs" />
+    <None Include="src\Test\States\testState\vertex.fs" />
   </ItemGroup>
 </Project>

@@ -29,6 +29,8 @@ void EngineLoop::run() {
 			this->pendingState = NULL;
 			states.top()->init();
 		}
+		glfwSwapBuffers(ClientDevice::getContext());
+		glfwPollEvents();
 	}
 }
 

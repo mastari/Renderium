@@ -133,15 +133,20 @@
     <ClCompile Include="src\EngineLoop\EngineLoop.cpp" />
     <ClCompile Include="src\Test\main.cpp" />
     <ClCompile Include="src\RenderiumWindow\RenderiumWindow.cpp" />
-    <ClCompile Include="src\Test\States\testState.cpp" />
+    <ClCompile Include="src\Test\States\testState\testState.cpp" />
+    <ClCompile Include="src\Utilities\FileReader\FileReader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ClientDevice\ClientDevice.h" />
     <ClInclude Include="src\EngineLoop\EngineLoop.h" />
     <ClInclude Include="src\EngineState\EngineState.h" />
     <ClInclude Include="src\RenderiumWindow\RenderiumWindow.h" />
-    <ClInclude Include="src\Test\States\testState.h" />
-    <ClInclude Include="src\Test\States\states.h" />
+    <ClInclude Include="src\Test\States\testState\testState.h" />
+    <ClInclude Include="src\Utilities\FileReader\FileReader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Test\States\testState\fragment.fs" />
+    <None Include="src\Test\States\testState\vertex.fs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

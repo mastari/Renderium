@@ -5,10 +5,10 @@
 
 #include "../RenderiumWindow/RenderiumWindow.h";
 #include "../EngineLoop/EngineLoop.h"
-#include "States/states.h"
+#include "States/testState/testState.h"
 
 int main() {
-	RenderiumWindow rWindow("Sim1.0", 800, 600, true);
+	RenderiumWindow rWindow("Particle Playground v0.1.2", 800, 600, true);
 
 	TestState* beginState = new TestState();
 
