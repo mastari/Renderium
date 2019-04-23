@@ -4,7 +4,7 @@
 #include "States/testState/testState.h"
 
 int main() {
-	RenderiumWindow rWindow("Particle Playground v0.0.1-ALPHA", 800, 600, true);
+	RenderiumWindow rWindow("Particle Playground v0.0.1-Alpha", 800, 600, true);
 
 	TestState* beginState = new TestState();
 
