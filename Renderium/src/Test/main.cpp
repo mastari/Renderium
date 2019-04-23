@@ -8,12 +8,10 @@
 #include "States/states.h"
 
 int main() {
-
 	RenderiumWindow rWindow("Sim1.0", 800, 600, true);
 
-	SecondState* state = new SecondState();
+	SecondState* startState = new SecondState();
 
-	EngineLoop looper((EngineState*)state);
+	EngineLoop looper((EngineState*)startState);
 	looper.run();
-
 }
