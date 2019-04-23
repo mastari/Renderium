@@ -4,7 +4,7 @@
 #include <GLFW/glfw3.h>
 
 #include "../../../Engine/Engine.h"
-#include "../../../Utilities/FileReader/FileReader.h"
+#include "../../../Utilities/Utilities.h"
 
 class TestState : virtual EngineState {
 private:
