@@ -24,13 +24,10 @@
     <ClCompile Include="src\EngineLoop\EngineLoop.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Test\States\first.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\Test\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Test\States\second.cpp">
+    <ClCompile Include="src\Test\States\testState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,13 +44,10 @@
     <ClInclude Include="src\EngineState\EngineState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\Test\States\first.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\Test\States\second.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\Test\States\states.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Test\States\testState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

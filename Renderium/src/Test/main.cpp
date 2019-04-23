@@ -10,8 +10,8 @@
 int main() {
 	RenderiumWindow rWindow("Sim1.0", 800, 600, true);
 
-	SecondState* startState = new SecondState();
+	TestState* beginState = new TestState();
 
-	EngineLoop looper((EngineState*)startState);
+	EngineLoop looper((EngineState*)beginState);
 	looper.run();
 }

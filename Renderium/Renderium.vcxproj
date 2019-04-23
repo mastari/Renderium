@@ -133,16 +133,14 @@
     <ClCompile Include="src\EngineLoop\EngineLoop.cpp" />
     <ClCompile Include="src\Test\main.cpp" />
     <ClCompile Include="src\RenderiumWindow\RenderiumWindow.cpp" />
-    <ClCompile Include="src\Test\States\first.cpp" />
-    <ClCompile Include="src\Test\States\second.cpp" />
+    <ClCompile Include="src\Test\States\testState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ClientDevice\ClientDevice.h" />
     <ClInclude Include="src\EngineLoop\EngineLoop.h" />
     <ClInclude Include="src\EngineState\EngineState.h" />
     <ClInclude Include="src\RenderiumWindow\RenderiumWindow.h" />
-    <ClInclude Include="src\Test\States\first.h" />
-    <ClInclude Include="src\Test\States\second.h" />
+    <ClInclude Include="src\Test\States\testState.h" />
     <ClInclude Include="src\Test\States\states.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

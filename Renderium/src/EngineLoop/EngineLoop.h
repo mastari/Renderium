@@ -12,6 +12,7 @@ public:
 	void pushState(class EngineState* nstate);
 private:
 	std::stack <class EngineState*> states;
+	class EngineState* pendingState;
 
 	static int netLoops;
 };
