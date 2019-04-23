@@ -9,7 +9,7 @@
 
 int main() {
 
-	RenderiumWindow rWindow("Sim1.0", 800, 600, false);
+	RenderiumWindow rWindow("Sim1.0", 800, 600, true);
 
 	SecondState* state = new SecondState();
 

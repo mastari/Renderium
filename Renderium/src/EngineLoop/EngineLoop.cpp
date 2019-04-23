@@ -13,6 +13,10 @@ EngineLoop::EngineLoop(EngineState* state) {
 	}
 }
 
+void EngineLoop::pushState(EngineState* nstate) {
+	states.push(nstate);
+}
+
 void EngineLoop::run() {
 	while (!glfwWindowShouldClose(ClientDevice::getContext())) {
 		states.top()->input();

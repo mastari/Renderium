@@ -7,10 +7,11 @@
 
 class EngineLoop {
 public:
-	EngineLoop(EngineState* state);
+	EngineLoop(class EngineState* state);
 	void run();
+	void pushState(class EngineState* nstate);
 private:
-	std::stack <EngineState*> states;
+	std::stack <class EngineState*> states;
 
 	static int netLoops;
 };
