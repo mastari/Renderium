@@ -9,9 +9,9 @@
 
 int main() {
 
-	RenderiumWindow rWindow("Sim1.0", 800, 600, true);
+	RenderiumWindow rWindow("Sim1.0", 800, 600, false);
 
-	FirstState* state = new FirstState();
+	SecondState* state = new SecondState();
 
 	EngineLoop looper((EngineState*)state);
 	looper.run();

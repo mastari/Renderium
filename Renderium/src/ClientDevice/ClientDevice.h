@@ -1,16 +1,21 @@
 #pragma once
 #include "GLFW/glfw3.h"
+#include "../EngineLoop/EngineLoop.h"
+
 
 class ClientDevice {
 public:
-	static void initClientDevice(GLFWwindow* window);
+	static void initWindow(GLFWwindow* window);
+	static void initLoop(class EngineLoop* loop);
 	static int getScreenWidth();
 	static int getScreenHeight();
-	static GLFWwindow* getCurrentContext();
+	static struct GLFWwindow* getContext();
+	static class EngineLoop* getLoop();
 
 private:
 	static int screenWidth;
 	static int screenHeight;
-	static GLFWwindow* currentContext;
+	static struct GLFWwindow* currentContext;
+	static class EngineLoop* currentLoop;
 	ClientDevice();
 };

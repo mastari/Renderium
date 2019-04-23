@@ -1,8 +1,11 @@
 #include "ClientDevice.h"
 
-void ClientDevice::initClientDevice(GLFWwindow* window) {
+void ClientDevice::initWindow(GLFWwindow* window) {
 	glfwGetFramebufferSize(window, &screenWidth, &screenHeight);
 	ClientDevice::currentContext = window;
+}
+void ClientDevice::initLoop(class EngineLoop* loop) {
+	ClientDevice::currentLoop = loop;
 }
 int ClientDevice::getScreenWidth() {
 	return ClientDevice::screenWidth;
@@ -10,11 +13,14 @@ int ClientDevice::getScreenWidth() {
 int ClientDevice::getScreenHeight() {
 	return ClientDevice::screenHeight;
 }
-
-GLFWwindow* ClientDevice::getCurrentContext() {
+struct GLFWwindow* ClientDevice::getContext() {
 	return ClientDevice::currentContext;
+}
+class EngineLoop* ClientDevice::getLoop() {
+	return ClientDevice::currentLoop;
 }
 
 int ClientDevice::screenWidth = NULL;
 int ClientDevice::screenHeight = NULL;
-GLFWwindow* ClientDevice::currentContext = NULL;
+struct GLFWwindow* ClientDevice::currentContext = NULL;
+class EngineLoop* ClientDevice::currentLoop = NULL;

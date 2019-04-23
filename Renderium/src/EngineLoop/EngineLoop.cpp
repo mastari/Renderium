@@ -4,6 +4,7 @@ EngineLoop::EngineLoop(EngineState* state) {
 	if (!EngineLoop::netLoops) {
 		this->states.push(state);
 		EngineLoop::netLoops++;
+		ClientDevice::initLoop(this);
 	}
 	else {
 		std::cout << "Sorry, you may only create one Engine Loop per program." << std::endl;
@@ -13,11 +14,10 @@ EngineLoop::EngineLoop(EngineState* state) {
 }
 
 void EngineLoop::run() {
-	GLFWwindow* context = ClientDevice::getCurrentContext();
-	while (!glfwWindowShouldClose(context)) {
+	while (!glfwWindowShouldClose(ClientDevice::getContext())) {
 		states.top()->input();
 		states.top()->update();
-		states.top()->render(context);
+		states.top()->render(ClientDevice::getContext());
 	}
 }
 

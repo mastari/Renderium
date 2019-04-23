@@ -1,12 +1,19 @@
 #include "RenderiumWindow.h"
 
+void fbscb(GLFWwindow* window, int width, int height) {
+	glViewport(0, 0, width, height);
+}
+
 int RenderiumWindow::netWindows = 0;
 
-RenderiumWindow::RenderiumWindow(const char* name, GLint width, GLint height, bool resizable) {
+RenderiumWindow::RenderiumWindow(std::string name, GLint width, GLint height, bool resizable) {
 	if (RenderiumWindow::netWindows == NULL) {
 		RenderiumWindow::netWindows++;
+
+		std::string brand = "Ohmastium: ";
+		brand.append(name);
 		//Init class values
-		this->windowTitle = name;
+		this->windowTitle = brand;
 		this->windowWidth = width;
 		this->windowHeight = height;
 		this->windowIsResizable = resizable;
@@ -18,10 +25,13 @@ RenderiumWindow::RenderiumWindow(const char* name, GLint width, GLint height, bo
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-		glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
+		if (windowIsResizable)
+			glfwWindowHint(GLFW_RESIZABLE, GL_TRUE);
+		else
+			glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
 		//Apply class values to physical context
-		this->contextWindow = glfwCreateWindow(windowWidth, windowHeight, windowTitle, nullptr, nullptr);
-		ClientDevice::initClientDevice(contextWindow);
+		this->contextWindow = glfwCreateWindow(windowWidth, windowHeight, windowTitle.c_str(), nullptr, nullptr);
+		ClientDevice::initWindow(contextWindow);
 
 		if (nullptr == this->contextWindow) {
 			std::cout << "Failed to create window.\n";
@@ -31,6 +41,7 @@ RenderiumWindow::RenderiumWindow(const char* name, GLint width, GLint height, bo
 		}
 
 		glfwMakeContextCurrent(this->contextWindow);
+		glfwSetFramebufferSizeCallback(this->contextWindow, fbscb);
 
 		glewExperimental = GL_TRUE;
 
@@ -57,6 +68,7 @@ GLint RenderiumWindow::getWidth() {
 GLint RenderiumWindow::getHeight() {
 	return this->windowHeight;
 }
-const char* RenderiumWindow::getTitle() {
+std::string RenderiumWindow::getTitle() {
 	return this->windowTitle;
 }
+
