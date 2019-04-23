@@ -129,7 +129,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ClientDevice\ClientDevice.cpp" />
+    <ClCompile Include="src\Test\main.cpp" />
+    <ClCompile Include="src\RenderiumWindow\RenderiumWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ClientDevice\ClientDevice.h" />
+    <ClInclude Include="src\RenderiumWindow\RenderiumWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
