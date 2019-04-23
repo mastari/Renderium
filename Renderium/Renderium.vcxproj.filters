@@ -33,6 +33,9 @@
     <ClCompile Include="src\ContextDevice\ContextDevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Renderium\ShaderProgram\ShaderProgram.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Utilities\FileReader\FileReader.h">
@@ -59,9 +62,15 @@
     <ClInclude Include="src\ContextDevice\ContextDevice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Renderium\ShaderProgram\ShaderProgram.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\OpenGL\OpenGL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Test\States\testState\fragment.fs" />
-    <None Include="src\Test\States\testState\vertex.fs" />
+    <None Include="src\Test\States\testState\vertex.glsl" />
+    <None Include="src\Test\States\testState\fragment.glsl" />
   </ItemGroup>
 </Project>

@@ -1,8 +1,8 @@
 #include "testState.h"
 
 void TestState::init() {
-	const char* vertexShaderSource = FileReader::readFromPath("src/Test/States/testState/vertex.fs");
-	const char* fragmentShaderSource = FileReader::readFromPath("src/Test/States/testState/fragment.fs");
+	const char* vertexShaderSource = FileReader::readFromPath("src/Test/States/testState/vertex.glsl");
+	const char* fragmentShaderSource = FileReader::readFromPath("src/Test/States/testState/fragment.glsl");
 
 	int vertexShader = glCreateShader(GL_VERTEX_SHADER);
 	glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);

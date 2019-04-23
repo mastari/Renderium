@@ -131,6 +131,7 @@
   <ItemGroup>
     <ClCompile Include="src\ContextDevice\ContextDevice.cpp" />
     <ClCompile Include="src\Engine\EngineLoop\EngineLoop.cpp" />
+    <ClCompile Include="src\Renderium\ShaderProgram\ShaderProgram.cpp" />
     <ClCompile Include="src\Test\main.cpp" />
     <ClCompile Include="src\Engine\EngineWindow\RenderiumWindow.cpp" />
     <ClCompile Include="src\Test\States\testState\testState.cpp" />
@@ -142,13 +143,15 @@
     <ClInclude Include="src\Engine\EngineLoop\EngineLoop.h" />
     <ClInclude Include="src\Engine\EngineState\EngineState.h" />
     <ClInclude Include="src\Engine\EngineWindow\RenderiumWindow.h" />
+    <ClInclude Include="src\Engine\OpenGL\OpenGL.h" />
+    <ClInclude Include="src\Renderium\ShaderProgram\ShaderProgram.h" />
     <ClInclude Include="src\Test\States\testState\testState.h" />
     <ClInclude Include="src\Utilities\FileReader\FileReader.h" />
     <ClInclude Include="src\Utilities\Utilities.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Test\States\testState\fragment.fs" />
-    <None Include="src\Test\States\testState\vertex.fs" />
+    <None Include="src\Test\States\testState\fragment.glsl" />
+    <None Include="src\Test\States\testState\vertex.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
