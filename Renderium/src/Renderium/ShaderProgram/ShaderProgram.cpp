@@ -39,9 +39,12 @@ void ShaderProgram::setInt(const char* name, int value) const
 {
 	glUniform1i(glGetUniformLocation(ID, name), value);
 }
-void ShaderProgram::setVec4(const char* name, float v1, float v2, float v3, float v4) {
+void ShaderProgram::setVec4(const char* name, float v1, float v2, float v3, float v4) const {
 	glUniform4f(glGetUniformLocation(ID, name), v1, v2, v3, v4);
 }
+//void ShaderProgram::setMat4(const char* name, glm::mat4 &m) {
+//	glUniform4fv(glGetUniformLocation(ID, name), 1, GL_FALSE, &m[0][0]);
+//}
 void ShaderProgram::setFloat(const char* name, float value) const
 {
 	glUniform1f(glGetUniformLocation(ID, name), value);

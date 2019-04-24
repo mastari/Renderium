@@ -4,6 +4,9 @@
 #include "../../Utilities/Utilities.h"
 #include <iostream>
 #include <string>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class ShaderProgram {
 public:
@@ -13,7 +16,8 @@ public:
 	void setBool(const char* name, bool value) const;
 	void setInt(const char* name, int value) const;
 	void setFloat(const char* name, float value) const;
-	void setVec4(const char* name, float v1, float v2, float v3, float v4);
+	void setVec4(const char* name, float v1, float v2, float v3, float v4) const;
+	//void setMat4(const char* name, glm::mat4 &m);
 
 private:
 	unsigned int ID;

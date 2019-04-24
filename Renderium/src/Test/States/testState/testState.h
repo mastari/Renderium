@@ -6,6 +6,9 @@
 #include "../../../Engine/Engine.h"
 #include "../../../Utilities/Utilities.h"
 #include "../../STB_Image/stb_image.h"
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 class TestState : virtual EngineState {
 private:
