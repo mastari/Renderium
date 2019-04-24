@@ -129,6 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="External Libraries\STB_Image\stb_image.cpp" />
     <ClCompile Include="src\ContextDevice\ContextDevice.cpp" />
     <ClCompile Include="src\Engine\EngineLoop\EngineLoop.cpp" />
     <ClCompile Include="src\Renderium\ShaderProgram\ShaderProgram.cpp" />
@@ -138,6 +139,7 @@
     <ClCompile Include="src\Utilities\FileReader\FileReader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="External Libraries\STB_Image\stb_image.h" />
     <ClInclude Include="src\ContextDevice\ContextDevice.h" />
     <ClInclude Include="src\Engine\Engine.h" />
     <ClInclude Include="src\Engine\EngineLoop\EngineLoop.h" />

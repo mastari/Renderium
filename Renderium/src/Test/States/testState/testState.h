@@ -5,6 +5,7 @@
 
 #include "../../../Engine/Engine.h"
 #include "../../../Utilities/Utilities.h"
+#include "../../STB_Image/stb_image.h"
 
 class TestState : virtual EngineState {
 private:
@@ -15,11 +16,7 @@ private:
 	void render(GLFWwindow* window);
 
 	ShaderProgram* ourShader;
-	float vertices[9] = {
-		 0.5f, -0.5f, 0.0f,  // bottom right
-		-0.5f, -0.5f, 0.0f,  // bottom left
-		 0.0f,  0.5f, 0.0f   // top 
-	};
-	unsigned int VBO, VAO;
+	unsigned int texture;
+	unsigned int VBO, VAO, EBO;
 
 };
