@@ -77,11 +77,9 @@ void TestState::render(GLFWwindow* context) {
 	glBindTexture(GL_TEXTURE_2D, texture);
 
 	glm::mat4 transform = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
-	transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+	transform = glm::translate(transform, glm::vec3(0.5f, sin(glfwGetTime())*-0.5f, 0.0f));
 	transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
 
-
-	// render container
 	ourShader->use();
 	unsigned int transformLoc = glGetUniformLocation(ourShader->getID(), "transform");
 	glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));

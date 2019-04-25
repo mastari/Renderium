@@ -10,7 +10,6 @@ uniform mat4 transform;
 
 void main()
 {
-	mat4 t = mat4(1,0,0,1,0,1,0,1,0,0,1,1,0,0,0,1);
     gl_Position = transform*vec4(aPos, 1.0);
     ourColor = aColor;
     TexCoord = aTexCoord;
