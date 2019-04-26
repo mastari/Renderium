@@ -17,7 +17,7 @@ public:
 	void setInt(const char* name, int value) const;
 	void setFloat(const char* name, float value) const;
 	void setVec4(const char* name, float v1, float v2, float v3, float v4) const;
-	//void setMat4(const char* name, glm::mat4 &m);
+	void setMat4(const char* name, glm::mat4 &m);
 
 private:
 	unsigned int ID;

@@ -42,9 +42,9 @@ void ShaderProgram::setInt(const char* name, int value) const
 void ShaderProgram::setVec4(const char* name, float v1, float v2, float v3, float v4) const {
 	glUniform4f(glGetUniformLocation(ID, name), v1, v2, v3, v4);
 }
-//void ShaderProgram::setMat4(const char* name, glm::mat4 &m) {
-//	glUniform4fv(glGetUniformLocation(ID, name), 1, GL_FALSE, &m[0][0]);
-//}
+void ShaderProgram::setMat4(const char* name, glm::mat4 &m) {
+	glUniformMatrix4fv(glGetUniformLocation(ID, name), 1, GL_FALSE, glm::value_ptr(m));
+}
 void ShaderProgram::setFloat(const char* name, float value) const
 {
 	glUniform1f(glGetUniformLocation(ID, name), value);
