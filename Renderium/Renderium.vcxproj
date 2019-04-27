@@ -132,6 +132,7 @@
     <ClCompile Include="External Libraries\STB_Image\stb_image.cpp" />
     <ClCompile Include="src\ContextDevice\ContextDevice.cpp" />
     <ClCompile Include="src\Engine\EngineLoop\EngineLoop.cpp" />
+    <ClCompile Include="src\Engine\Entities\Texture\Texture.cpp" />
     <ClCompile Include="src\Renderium\ShaderProgram\ShaderProgram.cpp" />
     <ClCompile Include="src\Test\main.cpp" />
     <ClCompile Include="src\Engine\EngineWindow\RenderiumWindow.cpp" />
@@ -145,6 +146,8 @@
     <ClInclude Include="src\Engine\EngineLoop\EngineLoop.h" />
     <ClInclude Include="src\Engine\EngineState\EngineState.h" />
     <ClInclude Include="src\Engine\EngineWindow\RenderiumWindow.h" />
+    <ClInclude Include="src\Engine\Entities\Entities.h" />
+    <ClInclude Include="src\Engine\Entities\Texture\Texture.h" />
     <ClInclude Include="src\Engine\OpenGL\OpenGL.h" />
     <ClInclude Include="src\Renderium\ShaderProgram\ShaderProgram.h" />
     <ClInclude Include="src\Test\States\testState\testState.h" />
