@@ -1,8 +1,12 @@
 #include "Texture.h"
 
+Texture::Texture() {
+
+}
+
 Texture::Texture(const char* path, int wrapmethod, int filtermethod) {
 	glGenTextures(1, &ID);
-	glBindTexture(GL_TEXTURE_2D, ID);
+	bind();
 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, wrapmethod);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, wrapmethod);
@@ -21,7 +25,8 @@ Texture::Texture(const char* path, int wrapmethod, int filtermethod) {
 		std::cout << "Failed to load texture" << std::endl;
 	}
 	stbi_image_free(data);
-}
+	unbind();
+}  
 
 void Texture::bind() {
 	glBindTexture(GL_TEXTURE_2D, ID);

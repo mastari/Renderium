@@ -1,7 +1,6 @@
 #pragma once
 #include "../../ContextDevice/ContextDevice.h"
 #include "../../Renderium/ShaderProgram/ShaderProgram.h"
-#include "../../Engine/Entities/Entities.h"
 
 class EngineState {
 public:

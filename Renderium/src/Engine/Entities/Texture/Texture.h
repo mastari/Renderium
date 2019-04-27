@@ -5,6 +5,7 @@
 
 class Texture {
 public:
+	Texture();
 	Texture(const char* path, int wrap, int filter);
 	void bind();
 	void unbind();
@@ -13,5 +14,4 @@ public:
 private:
 	unsigned int ID;
 	int width, height, nrChannels;
-	static unsigned int lastID;
 };

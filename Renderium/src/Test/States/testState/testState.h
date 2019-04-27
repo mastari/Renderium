@@ -9,6 +9,7 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include "../../../Engine/Entities/Texture/Texture.h"
 
 class TestState : virtual EngineState {
 private:
@@ -20,6 +21,7 @@ private:
 
 	ShaderProgram* ourShader;
 	unsigned int texture;
+	Texture myTexture;
 	unsigned int VBO, VAO, EBO;
 
 	glm::mat4 model = glm::mat4(1.0f);
