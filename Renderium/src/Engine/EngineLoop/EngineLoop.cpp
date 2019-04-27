@@ -10,7 +10,6 @@ EngineLoop::EngineLoop(EngineState* state) {
 	else {
 		std::cout << "Sorry, you may only create one Engine Loop per program." << std::endl;
 		exit(EXIT_FAILURE);
-
 	}
 }
 
@@ -20,17 +19,32 @@ void EngineLoop::pushState(EngineState* nstate) {
 
 void EngineLoop::run() {
 	states.top()->init();
+
+	double lastTime = glfwGetTime();
+
 	while (!glfwWindowShouldClose(ContextDevice::getContext())) {
-		states.top()->input();
-		states.top()->update();
-		states.top()->render(ContextDevice::getContext());
+
 		if (pendingState != NULL) {
 			states.push(this->pendingState);
 			this->pendingState = NULL;
-			states.top()->init();
+			break;
 		}
+
+		double current = glfwGetTime();
+		elapsed = current - lastTime;
+
+		states.top()->input();
+		states.top()->update(elapsed);
+		states.top()->render(ContextDevice::getContext());
 		glfwSwapBuffers(ContextDevice::getContext());
 		glfwPollEvents();
+
+		lastTime = current;
+	}
+	if (!glfwWindowShouldClose(ContextDevice::getContext())) {
+		glfwSwapBuffers(ContextDevice::getContext());
+		glfwPollEvents();
+		run();
 	}
 }
 

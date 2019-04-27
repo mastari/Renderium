@@ -9,6 +9,8 @@ public:
 	EngineLoop(class EngineState* state);
 	void run();
 	void pushState(class EngineState* nstate);
+
+	static double elapsed;
 private:
 	std::stack <class EngineState*> states;
 	class EngineState* pendingState;
