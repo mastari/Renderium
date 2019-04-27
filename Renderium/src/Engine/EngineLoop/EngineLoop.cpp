@@ -17,6 +17,8 @@ void EngineLoop::pushState(EngineState* nstate) {
 	this->pendingState = nstate;
 }
 
+double EngineLoop::elapsed = 0;
+
 void EngineLoop::run() {
 	states.top()->init();
 
