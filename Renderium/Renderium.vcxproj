@@ -132,12 +132,14 @@
     <ClCompile Include="External Libraries\STB_Image\stb_image.cpp" />
     <ClCompile Include="src\ContextDevice\ContextDevice.cpp" />
     <ClCompile Include="src\Engine\EngineLoop\EngineLoop.cpp" />
+    <ClCompile Include="src\Engine\Entities\EngineModel\EngineModel.cpp" />
     <ClCompile Include="src\Engine\Entities\Texture\Texture.cpp" />
     <ClCompile Include="src\Renderium\ShaderProgram\ShaderProgram.cpp" />
     <ClCompile Include="src\Test\main.cpp" />
     <ClCompile Include="src\Engine\EngineWindow\RenderiumWindow.cpp" />
     <ClCompile Include="src\Test\States\testState\testState.cpp" />
     <ClCompile Include="src\Utilities\FileReader\FileReader.cpp" />
+    <ClCompile Include="src\Utilities\SizableArray\SizeableArray.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="External Libraries\STB_Image\stb_image.h" />
@@ -146,12 +148,14 @@
     <ClInclude Include="src\Engine\EngineLoop\EngineLoop.h" />
     <ClInclude Include="src\Engine\EngineState\EngineState.h" />
     <ClInclude Include="src\Engine\EngineWindow\RenderiumWindow.h" />
+    <ClInclude Include="src\Engine\Entities\EngineModel\EngineModel.h" />
     <ClInclude Include="src\Engine\Entities\Entities.h" />
     <ClInclude Include="src\Engine\Entities\Texture\Texture.h" />
     <ClInclude Include="src\Engine\OpenGL\OpenGL.h" />
     <ClInclude Include="src\Renderium\ShaderProgram\ShaderProgram.h" />
     <ClInclude Include="src\Test\States\testState\testState.h" />
     <ClInclude Include="src\Utilities\FileReader\FileReader.h" />
+    <ClInclude Include="src\Utilities\SizableArray\SizableArray.h" />
     <ClInclude Include="src\Utilities\Utilities.h" />
   </ItemGroup>
   <ItemGroup>

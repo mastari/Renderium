@@ -10,6 +10,7 @@
 
 class ShaderProgram {
 public:
+	ShaderProgram();
 	ShaderProgram(std::string vs, std::string fs);
 	unsigned int getID();
 	void use();
@@ -23,5 +24,4 @@ private:
 	unsigned int ID;
 
 	void checkCompileErrors(unsigned int shader, std::string type);
-	ShaderProgram();
 };

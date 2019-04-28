@@ -1,5 +1,9 @@
 #include "ShaderProgram.h"
 
+ShaderProgram::ShaderProgram() {
+
+}
+
 ShaderProgram::ShaderProgram(std::string vs, std::string fs) {
 	const char* vShaderCode = FileReader::readFromPath(vs);
     const char* fShaderCode = FileReader::readFromPath(fs);
