@@ -20,7 +20,9 @@ private:
 	void render(GLFWwindow* window);
 	ShaderProgram ourShader;
 	EngineModel myModel;
+	EngineEntity myEntity;
 	unsigned int VBO, VAO, EBO;
+	float rot = 0;
 
 	glm::mat4 model = glm::mat4(1.0f);
 	glm::mat4 view = glm::mat4(1.0f);

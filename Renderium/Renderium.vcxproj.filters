@@ -48,6 +48,9 @@
     <ClCompile Include="src\Utilities\SizableArray\SizeableArray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Engine\Entities\EngineEntity\EngineEntity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Utilities\FileReader\FileReader.h">
@@ -93,6 +96,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\Utilities\SizableArray\SizableArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Engine\Entities\EngineEntity\EngineEntity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
