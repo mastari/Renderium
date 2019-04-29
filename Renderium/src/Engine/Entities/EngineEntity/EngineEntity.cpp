@@ -18,10 +18,10 @@ void EngineEntity::setRotationX(float rotation) {
 	this->rotationX = rotation;
 }
 void EngineEntity::setRotationY(float rotation) {
-	this->rotationX = rotation;
+	this->rotationY = rotation;
 }
 void EngineEntity::setRotationZ(float rotation) {
-	this->rotationX = rotation;
+	this->rotationZ = rotation;
 }
 void EngineEntity::setScale(glm::vec3 scale) {
 	this->scale = scale;

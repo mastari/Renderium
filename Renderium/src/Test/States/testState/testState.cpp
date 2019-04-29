@@ -50,6 +50,8 @@ void TestState::init() {
 
 	myEntity = EngineEntity(&myModel);
 
+	myEntity.setScale(glm::vec3(1, 1, sca));
+
 	glEnable(GL_DEPTH_TEST);
 }
 void TestState::input() { // Time of last frame
@@ -69,8 +71,8 @@ void TestState::update(double deltaTime) {
 		cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
 		cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
-	if (glfwGetKey(window, GLFW_KEY_APOSTROPHE) == GLFW_PRESS)
-		rot += 0.01;
+	rot += deltaTime*2;
+	sca -= deltaTime * 7;
 }
 
 void TestState::render(GLFWwindow* context) {
@@ -91,7 +93,8 @@ void TestState::render(GLFWwindow* context) {
 
 	myEntity.getModel()->bind();
 
-	myEntity.setRotationX(sin(rot));
+	myEntity.setRotationZ(rot);
+	myEntity.setScale(glm::vec3(sqrt(abs(sca)), sqrt(abs(sca)), sqrt(abs(sca/2))));
 
 	glm::mat4 model = myEntity.getTransform();
 	view = glm::lookAt(cameraPos, glm::vec3(0.0f, 0.0f, 0.0f) + cameraFront, cameraUp);
