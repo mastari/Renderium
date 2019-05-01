@@ -10,9 +10,10 @@ public:
 	void bind();
 	void unbind();
 
+	ShaderProgram* getModelShader();
+
 private:
 	Texture* texture;
 	ShaderProgram* shader;
 	unsigned int VAO;
-
 };

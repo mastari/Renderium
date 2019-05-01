@@ -24,6 +24,10 @@ EngineModel::EngineModel(SizableArray vertices, Texture* texture, ShaderProgram*
 
 }
 
+ShaderProgram* EngineModel::getModelShader() {
+	return shader;
+}
+
 void EngineModel::bind() {
 	glBindVertexArray(VAO);
 	texture->bind();
